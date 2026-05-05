@@ -221,7 +221,12 @@ export default function Home() {
               alt="Logo ATIV Brasil"
               width={120}
               height={40}
-              style={{ objectFit: "contain", marginBottom: 12 }}
+              style={{
+                objectFit: "contain",
+                marginBottom: 12,
+                width: "auto",
+                height: "auto",
+              }}
             />
             <p className="mt-4 font-semibold text-[#1B3A5C]">
               — Alex Andreoli Dantas, Fundador ATIV Brasil

@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "Conformidade que Fecha Contrato | ATIV Brasil",
   description:
     "E-book para gestores de segurança privada. Lei 14.967/24, checklist de 12 pontos, plano 30 dias. Instrutor credenciado PF Nº 89/2026.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
