@@ -184,15 +184,28 @@ export default function Home() {
             </h2>
             <ul className="mt-6 space-y-3">
               {[
-                "Veterano da Força Tática da Polícia Militar",
-                "Veterano da Força Aérea Brasileira",
-                "Pós-graduado em Filosofia",
-                "Fundador da ATIV Brasil — plataforma SaaS de gestão operacional",
-                "Especialista em conformidade com a Lei 14.967/24 e ISO 18788",
+                { text: "Veterano da Força Tática da Polícia Militar" },
+                { text: "Veterano da Força Aérea Brasileira" },
+                { text: "Pós-graduado em Filosofia" },
+                {
+                  text: "Fundador da ATIV Brasil — plataforma SaaS de gestão operacional",
+                },
+                {
+                  highlight: "Instrutor Credenciado pela Polícia Federal",
+                  text: " — Credenciamento nº 89/2026 (DPF/CAS/SP), habilitado em 13 disciplinas oficiais da segurança privada, incluindo Gerenciamento de Crise, Vigilância e Direitos Humanos. Válido até 2031.",
+                },
               ].map((item) => (
-                <li key={item} className="flex gap-3 text-[#0E2033]">
+                <li
+                  key={item.highlight ?? item.text}
+                  className="flex gap-3 text-[#0E2033]"
+                >
                   <span className="mt-1 text-[#C9A84C]">●</span>
-                  <span>{item}</span>
+                  <span>
+                    {item.highlight ? (
+                      <strong>{item.highlight}</strong>
+                    ) : null}
+                    {item.text}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -232,6 +245,21 @@ export default function Home() {
               — Alex Andreoli Dantas, Fundador ATIV Brasil
             </p>
           </aside>
+
+          <div
+            data-reveal
+            className="mt-2 max-w-[460px] translate-y-8 rounded-sm border-l-[3px] border-[#C9A84C] bg-[#F4F1EA] px-[18px] py-[14px] text-[13px] leading-relaxed text-[#0E2033]/75 opacity-0 transition-all duration-700 lg:col-span-2"
+          >
+            <span aria-hidden="true">🏛️</span>{" "}
+            <strong className="text-[#1B3A5C]">
+              Credenciamento nº 89/2026 — Polícia Federal / DPF/CAS/SP
+            </strong>
+            <br />
+            <br />
+            Habilitado como instrutor em 13 disciplinas oficiais da segurança
+            privada, com validade até 2031. O mesmo órgão que fiscaliza e autua
+            empresas de segurança privada no Brasil.
+          </div>
         </div>
       </section>
 
